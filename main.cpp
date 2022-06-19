@@ -5,13 +5,12 @@ int main(int argc, char **argv)
 {
  QApplication app (argc, argv);
 
- QPushButton button1; // ("Hello world !");
-  button1.setText("My text");
-  button1.setToolTip("A tooltip");
-  QFont font ("Comic Sans MS");
-  button1.setFont(font);
-  QPushButton button2 ("other", &button1);
-  button1.show();
+ QWidget window;
+ window.setFixedSize(100,50);
 
+ QPushButton *button = new QPushButton("Hello world !", &window);
+ button->setGeometry(10, 10, 80, 30);
+
+ window.show();
  return app.exec();
 }
