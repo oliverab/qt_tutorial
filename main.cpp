@@ -1,15 +1,12 @@
 #include <QApplication>
-#include <QPushButton>
+#include "window.h"
 
 int main(int argc, char **argv)
 {
  QApplication app (argc, argv);
 
- QWidget window;
+ Window window;
  window.setFixedSize(100,50);
-
- QPushButton *button = new QPushButton("Hello world !", &window);
- button->setGeometry(10, 10, 80, 30);
 
  window.show();
  return app.exec();
