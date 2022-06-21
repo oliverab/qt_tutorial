@@ -24,6 +24,10 @@ int main(int argc, char **argv)
  slider->setValue(0);
  slider->setGeometry(10, 40, 180, 30);
 
+ // Connection
+
+ QObject::connect(slider, SIGNAL (valueChanged(int)), progressBar, SLOT (setValue(int)));
+
  window.show();
  return app.exec();
 }
